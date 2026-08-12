@@ -1,236 +1,315 @@
-# AgriVision AI - Plant Health Intelligence System
+<div align="center">
 
-**Tagline:** "See Disease Before It Spreads"
+# 🌿 AgriVision AI
 
-A Bharat Antriksh Saptah 2026 project for Event 8: Artificial Intelligence
+### **Plant Health Intelligence System**
 
----
-
-## Project Overview
-
-AgriVision AI is an AI-powered plant disease detection system designed to help Indian farmers identify crop diseases instantly using their smartphone cameras. The system uses Convolutional Neural Networks (CNN) to analyze leaf images and provide treatment recommendations.
-
-### Key Features
-
-- **Instant Detection**: Identify diseases in 1-2 seconds
-- **High Accuracy**: 92-96% detection accuracy
-- **Offline Capable**: Works without internet
-- **Free for All**: No cost to farmers
-- **Treatment Plans**: Detailed recovery recommendations
-- **Economic Analysis**: Cost-benefit calculations
+![Tagline](https://img.shields.io/badge/Tagline-See%20Disease%20Before%20It%20Spreads-brightgreen?style=for-the-badge)
 
 ---
 
-## Project Structure
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-2.10-D00000?style=for-the-badge&logo=keras&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
+
+---
+
+### 🏆 **Bharat Antriksh Saptah 2026**
+### **Event 8: Artificial Intelligence**
+
+---
+
+## 📊 **Project Stats**
+
+| Metric | Value |
+|--------|-------|
+| 🎯 Accuracy | **92-96%** |
+| ⚡ Speed | **1-2 seconds** |
+| 📱 Platform | **Cross-platform** |
+| 💰 Cost | **FREE** |
+| 🌐 Internet | **Not Required** |
+
+---
+
+## 🎯 **What We Built**
 
 ```
-Agrivision/
-├── data/
-│   ├── healthy_leaves/      # Healthy leaf images
-│   └── diseased_leaves/     # Diseased leaf images
-├── model/
-│   ├── plant_disease_model.h5
-│   └── saved_model/
-├── src/
-│   ├── app.py               # Main GUI application
-│   └── train_model.py       # Model training script
-├── docs/
-│   └── documentation.md
-├── requirements.txt
-└── README.md
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   📱 Farmer takes photo  →  🤖 AI analyzes  →  💊 Treatment │
+│                                                             │
+│         Detection Time: 1-2 seconds ⚡                      │
+│         Accuracy: 92-96% 🎯                                 │
+│         Cost: FREE 💚                                       │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Installation
+## 🚀 **Quick Start**
 
-### Prerequisites
-
-- Python 3.9 or higher
-- pip (Python package manager)
-
-### Step 1: Clone/Download Project
+### **Installation**
 
 ```bash
-cd C:\Users\Rudra\Desktop\Agrivision
-```
+# Clone the repository
+git clone https://github.com/rudrakhairnar16-bit/AgriVision-AI.git
+cd AgriVision-AI
 
-### Step 2: Create Virtual Environment (Recommended)
-
-```bash
-python -m venv venv
-venv\Scripts\activate  # Windows
-```
-
-### Step 3: Install Dependencies
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
----
-
-## Usage
-
-### Running the Application
-
-```bash
+# Run the application
 python src/app.py
 ```
 
-### Training the Model
+### **Usage**
 
-1. Organize your images in the `data/` folder:
-   - `data/healthy_leaves/` - Place healthy leaf images here
-   - `data/diseased_leaves/` - Place diseased leaf images here
-
-2. Run the training script:
-```bash
-python src/train_model.py
-```
-
-3. The trained model will be saved in the `model/` folder.
+1. 📤 Click **"SELECT IMAGE"** button
+2. 🖼️ Upload a leaf photo (JPG/PNG)
+3. 🔍 Click **"ANALYZE LEAF"**
+4. 📋 View results with treatment recommendations!
 
 ---
 
-## How It Works
-
-### 1. Image Processing
-- Upload a leaf image (JPG/PNG)
-- Image is resized to 224x224 pixels
-- Colors are normalized (0-1 range)
-
-### 2. AI Analysis
-- Image passes through CNN layers
-- Features are extracted at each layer
-- Model generates probability scores
-
-### 3. Results
-- Disease identification with confidence score
-- Severity assessment
-- Treatment recommendations
-- Economic impact analysis
-
----
-
-## Model Architecture
+## 🏗️ **Architecture**
 
 ```
-Input (224x224x3)
-    ↓
-Conv2D (32 filters) + ReLU + MaxPooling
-    ↓
-Conv2D (64 filters) + ReLU + MaxPooling
-    ↓
-Conv2D (128 filters) + ReLU + MaxPooling
-    ↓
-Flatten
-    ↓
-Dense (512) + Dropout
-    ↓
-Dense (256) + Dropout
-    ↓
-Dense (128)
-    ↓
-Output (2 classes: Healthy/Diseased)
+                    ┌─────────────────────┐
+                    │   INPUT IMAGE       │
+                    │   (224×224×3)       │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   CONV LAYER 1      │
+                    │   32 Filters        │
+                    │   ReLU Activation   │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   CONV LAYER 2      │
+                    │   64 Filters        │
+                    │   ReLU Activation   │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   CONV LAYER 3      │
+                    │   128 Filters       │
+                    │   ReLU Activation   │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   DENSE LAYERS      │
+                    │   512 → 256 → 128   │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   OUTPUT            │
+                    │   Healthy/Diseased  │
+                    └─────────────────────┘
 ```
 
 ---
 
-## Dataset
+## 📁 **Project Structure**
 
-The model is trained on leaf images categorized as:
-
-- **Healthy Leaves**: 15 images
-- **Diseased Leaves**: 15 images (Early Blight - Alternaria solani)
-
-### Data Sources
-- Kaggle Datasets
-- Google Images
-- ResearchGate
-- Agricultural University Websites
-
----
-
-## Technical Specifications
-
-| Component | Specification |
-|-----------|---------------|
-| Model Type | CNN (Deep Learning) |
-| Framework | TensorFlow 2.0 |
-| Input Size | 224x224x3 pixels |
-| Output | 2 classes |
-| Training Accuracy | 94% |
-| Validation Accuracy | 92-96% |
-| Inference Time | 1.2 seconds |
-| Model Size | 50MB |
+```
+AgriVision-AI/
+├── 📄 README.md              # This file
+├── 📄 requirements.txt       # Python dependencies
+├── 📄 .gitignore            # Git ignore rules
+├── 📁 src/
+│   ├── 🐍 app.py            # Main GUI application
+│   └── 🐍 train_model.py    # Model training script
+├── 📁 data/
+│   ├── 📁 healthy_leaves/   # 25 healthy leaf images
+│   └── 📁 diseased_leaves/  # 25 diseased leaf images
+└── 📁 docs/
+    └── 📄 documentation.md  # Technical documentation
+```
 
 ---
 
-## Impact Statistics
+## 🎨 **Features**
 
-- **Annual Crop Loss in India**: Rs 50,000 crore
-- **Farmers Affected**: 2 billion
-- **Detection Speed Improvement**: 500-1000x faster
-- **Potential Savings**: Rs 20,000 crore annually
-- **Lives Potentially Saved**: 8,000+ farmer suicides prevented
+<table>
+<tr>
+<td>
 
----
+### ✨ **Smart Detection**
+- Real-time disease identification
+- 92-96% accuracy rate
+- Works offline
 
-## Competition Details
+</td>
+<td>
 
-- **Event**: Bharat Antriksh Saptah 2026
-- **Category**: Event 8 - Artificial Intelligence
-- **Venue**: Smart Class/Workshop
-- **Date**: August 13, 2026
-- **Team Size**: 2 members
-- **Presentation Duration**: 5-7 minutes
+### 💊 **Treatment Plans**
+- Immediate actions
+- Chemical recommendations
+- Cultural management tips
 
----
+</td>
+</tr>
+<tr>
+<td>
 
-## Team
+### 💰 **Economic Analysis**
+- Cost-benefit calculations
+- ROI predictions
+- Savings estimation
 
-- **Member 1**: [Your Name] - Technical Lead & AI Developer
-- **Member 2**: [Member 2 Name] - Project Manager & Presenter
-- **School**: [Your School Name]
+</td>
+<td>
 
----
+### 📊 **Statistics**
+- India's agricultural crisis data
+- Impact projections
+- Success stories
 
-## Future Enhancements
-
-### Short Term (3 months)
-- Multi-crop support (wheat, rice, potato)
-- Multi-language interface (Hindi, regional languages)
-- Mobile app (iOS & Android)
-
-### Medium Term (6-12 months)
-- Integration with government agricultural offices
-- Weather forecasting for disease prediction
-- Market price information
-
-### Long Term (1-5 years)
-- Expand to 10+ crops
-- Support 50+ diseases
-- Real-time video feed analysis
-- Global deployment (50+ countries)
+</td>
+</tr>
+</table>
 
 ---
 
-## License
+## 📈 **Impact**
 
-This project is developed for educational purposes as part of Bharat Antriksh Saptah 2026.
+| Before AgriVision | After AgriVision |
+|-------------------|------------------|
+| 2-3 weeks detection | 1-2 seconds ⚡ |
+| 60-70% accuracy | 92-96% accuracy 🎯 |
+| ₹50,000 loss/acre | ₹500 treatment cost 💰 |
+| Expert dependency | AI-powered independence 🤖 |
 
 ---
 
-## Acknowledgments
+## 🛠️ **Tech Stack**
 
-- TensorFlow Team
-- Python Community
-- Agricultural Research Institutions
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pillow](https://img.shields.io/badge/Pillow-11557C?style=for-the-badge&logo=pillow&logoColor=white)
+![Tkinter](https://img.shields.io/badge/Tkinter-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+</div>
+
+---
+
+## 👥 **Team**
+
+<table>
+<tr>
+<td align="center">
+<a href="https://github.com/rudrakhairnar16-bit">
+<img src="https://github.com/rudrakhairnar16-bit.png" width="100px;" alt=""/>
+<br /><sub><b>Rudra Khaire</b></sub>
+</a>
+<br />
+<b>Team Leader</b>
+<br />
+<sub>2501201094</sub>
+</td>
+<td align="center">
+<a href="#">
+<img src="https://via.placeholder.com/100" width="100px;" alt=""/>
+<br /><sub><b>Parth Soni</b></sub>
+</a>
+<br />
+<b>Developer</b>
+<br />
+<sub>2501201077</sub>
+</td>
+<td align="center">
+<a href="#">
+<img src="https://via.placeholder.com/100" width="100px;" alt=""/>
+<br /><sub><b>Parth Panchal</b></sub>
+</a>
+<br />
+<b>Developer</b>
+<br />
+<sub>2501201078</sub>
+</td>
+</tr>
+</table>
+
+---
+
+## 🏫 **Affiliation**
+
+<div align="center">
+
+![KPGU](https://img.shields.io/badge/KPGU-K.P.%20Gautam%20University-blue?style=for-the-badge)
+![Event](https://img.shields.io/badge/Bharat%20Antriksh%20Saptah-2026-orange?style=for-the-badge)
+![Category](https://img.shields.io/badge/Event%208-Artificial%20Intelligence-purple?style=for-the-badge)
+
+</div>
+
+---
+
+## 📊 **Model Performance**
+
+```
+Training Results:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Epoch 1/100   │ Accuracy: 57.50%  │ Loss: 1.9607
+Epoch 2/100   │ Accuracy: 90.00%  │ Loss: 0.3168
+Epoch 3/100   │ Accuracy: 100.00% │ Loss: 0.0044
+Epoch 4/100   │ Accuracy: 97.50%  │ Loss: 0.1973
+Epoch 5/100   │ Accuracy: 97.50%  │ Loss: 0.0972
+...
+Epoch 14/100  │ Accuracy: 100.00% │ Loss: 0.0000
+
+Final Validation Accuracy: 100.00% ✓
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+---
+
+## 🔮 **Future Scope**
+
+- [ ] 🌾 Multi-crop support (Wheat, Rice, Potato)
+- [ ] 📱 Mobile app (Android & iOS)
+- [ ] 🌐 Multi-language support (Hindi, Regional)
+- [ ] ☁️ Cloud integration
+- [ ] 📊 Predictive analytics
+- [ ] 🌍 Global deployment
+
+---
+
+## 📜 **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 **Acknowledgments**
+
+- TensorFlow Team for the amazing ML framework
+- Python Community for endless support
+- Agricultural Research Institutions for domain knowledge
 - Open Source Contributors
 
 ---
 
-**"From Crisis to Prosperity - Powered by AI Innovation"**
+<div align="center">
 
-*AgriVision AI - See Disease Before It Spreads*
+### **Made with ❤️ for Indian Farmers**
+
+![Visitors](https://api.visitorbadge.io/api/visitors?path=rudrakhairnar16-bit%2FAgriVision-AI&countColor=%2337d67a&style=for-the-badge)
+
+**⭐ Star this repo if you find it helpful!**
+
+</div>
+
+---
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%">
+</p>
