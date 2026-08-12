@@ -225,7 +225,7 @@ class AgriVisionApp:
 
         team_info = tk.Label(
             team_frame,
-            text="Team Leader: Rudra Khaire (2501201094) | Parth Soni (2501201077) | Parth Panchal (2501201078) | KPGU",
+            text="Team Leader: Rudra Khaire (2501201094) | Parth Soni (2501201077) | Parth Panchal (2501201078) | Dr. Kiran & Pallavi Patel Global University",
             font=("Segoe UI", 8),
             bg="#0a1a12",
             fg=self.colors['text_dim'],

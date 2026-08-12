@@ -244,7 +244,7 @@ AgriVision-AI/
 
 <div align="center">
 
-![KPGU](https://img.shields.io/badge/KPGU-K.P.%20Gautam%20University-blue?style=for-the-badge)
+![KPGU](https://img.shields.io/badge/Dr.%20Kiran%20%26%20Pallavi%20Patel%20Global%20University-blue?style=for-the-badge)
 ![Event](https://img.shields.io/badge/Bharat%20Antriksh%20Saptah-2026-orange?style=for-the-badge)
 ![Category](https://img.shields.io/badge/Event%208-Artificial%20Intelligence-purple?style=for-the-badge)
 
